@@ -1,6 +1,7 @@
 package com.rousselsproject.neatwork.controller;
 
 import com.rousselsproject.neatwork.model.UserModel;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.rousselsproject.neatwork.repository.UserRepository;
@@ -8,7 +9,9 @@ import com.rousselsproject.neatwork.repository.UserRepository;
 
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
+@CrossOrigin
 public class UserController {
     @Autowired
     private UserRepository userRepos;

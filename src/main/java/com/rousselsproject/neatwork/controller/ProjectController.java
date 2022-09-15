@@ -3,12 +3,15 @@ package com.rousselsproject.neatwork.controller;
 import com.rousselsproject.neatwork.model.ProjectModel;
 import com.rousselsproject.neatwork.model.TaskModel;
 import com.rousselsproject.neatwork.repository.ProjectRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
+@CrossOrigin
 public class ProjectController {
 
     @Autowired
