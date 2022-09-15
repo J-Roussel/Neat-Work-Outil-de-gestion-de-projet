@@ -16,7 +16,7 @@ public class MissionController {
 
     @Autowired
     private MissionRepository missionRepos;
-    @GetMapping("/get_Missions")
+    @GetMapping("/getMission")
     public List<MissionModel> getAllMissions(){
         return missionRepos.findAll();
     }

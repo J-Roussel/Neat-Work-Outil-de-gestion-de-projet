@@ -16,7 +16,7 @@ public class TypeUserController {
     @Autowired
     private TypeUserRepository typeUserRepository;
 
-    @GetMapping("/getUserTypes")
+    @GetMapping("/getUserType")
     public List<TypeUserModel> getAllUserTypes(){
         return typeUserRepository.findAll();
     }

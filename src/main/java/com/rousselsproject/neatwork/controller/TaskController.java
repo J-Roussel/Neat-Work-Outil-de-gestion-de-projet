@@ -16,7 +16,7 @@ import java.util.List;
 public class TaskController {
     @Autowired
     private TaskRepository taskRepos;
-    @GetMapping("/getTasks")
+    @GetMapping("/getTask")
     public List<TaskModel> getAllTasks(){
         return taskRepos.findAll();
     }

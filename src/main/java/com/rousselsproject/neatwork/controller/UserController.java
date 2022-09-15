@@ -17,7 +17,7 @@ public class UserController {
     private UserRepository userRepos;
 
     //to see all collaborators
-    @GetMapping("/getAllUsers")
+    @GetMapping("/getUser")
     public List<UserModel> getAllUsers(){
         return userRepos.findAll();
     }
