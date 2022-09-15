@@ -1,8 +1,10 @@
 package com.rousselsproject.neatwork.model;
 
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,9 +20,10 @@ public class TaskModel {
     @Column(name = "id_task", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idTask;
-
     @Column(name = "task", nullable = false, length = 150)
     private String task;
+    @CreationTimestamp
+    private Instant taskCreationDate;
 
     //manyToOne : relation entre la entre entité taskModel et UserModel
     @ManyToOne
